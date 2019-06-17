@@ -19,5 +19,9 @@ var comida = new Theme({ name: 'comida' });
 comida.save(function (err, comida) {
     if (err) return console.error(err);
 });
+Theme.find(function (err, themes) {
+    if (err) return console.error(err);
+    console.log(themes);
+})
 
 console.log('saved comida on database');
